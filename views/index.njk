@@ -5,11 +5,13 @@
 {% endblock %}
 
 {% block main %}
-    <ul>
-    {% for message in messages %}
-    <li>{{ message.text }}</li>
-    <li>{{ message.user }}</li>
-    <li>{{ message.added }}</li>
-    {% endfor %}
-    </ul>
+    <div class="message-container">
+        {% for message in messages %}
+        <div class="message">
+            <h3 class="message-author">{{ message.author }}</h3>
+            <p class="message-text">{{ message.text }}</p>
+            <span class="message-timestamp">{{ message.timestamp }}</span>
+        </div>
+        {% endfor %}
+  </div>
 {% endblock %}
