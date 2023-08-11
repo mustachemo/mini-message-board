@@ -5,6 +5,7 @@ import logger from 'morgan';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import indexRouter from './routes/index.js';
 
 dotenv.config();
 
@@ -27,9 +28,9 @@ app.use(logger('dev'));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', indexRouter);
+app.use('/', indexRouter);
 // app.use('/new', newMessageRouter);
 
 app.listen(port, () => {
-  console.log(`listening on port ${port}!`);
+  console.log(`listening on 127.0.0.1:${port}!`);
 });

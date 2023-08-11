@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap"
+      rel="stylesheet" />
+
+    <link href="public/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="brand-title">Library App</div>
+      <a href="#" class="navbar-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/mohamed-hasan-4b850418a/"
+              >Connect</a
+            >
+          </li>
+          <li><a href="https://github.com/momoproblems">Github</a></li>
+          <li>
+            <a href="#"><button>Login</button></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="books-grid">
+        <div class="book-card">
+          <div class="book-card-title">
+            <div class="book-card-imgs"><img src="assets/imgs/book.svg" /></div>
+            <div class="book-card-text">The Lord of the Rings</div>
+          </div>
+          <div class="book-card-title">
+            <div class="book-card-imgs">
+              <img src="assets/imgs/author.svg" />
+            </div>
+            <div class="book-card-text">J.R.R. Tolkien</div>
+          </div>
+          <div class="book-card-title">
+            <div class="book-card-imgs">
+              <img src="assets/imgs/pages.svg" />
+            </div>
+            <div class="book-card-text">714</div>
+          </div>
+          <div class="book-card-buttons">
+            <div>
+              <button class="button button-primary book-card-edit-button">
+                Edit
+              </button>
+            </div>
+            <div>
+              <button class="button button-secondary book-card-remove-button">
+                Remove
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="add-book">
+      <img src="assets/imgs/add.svg" />
+    </div>
+    <div class="add-book-container">
+      <form class="add-book-form">
+        <div class="book-card">
+          <div class="book-card-title">
+            <div class="book-card-imgs">
+              <img src="assets/imgs/book.svg" alt="Book Cover" />
+            </div>
+            <div class="book-card-text">
+              <input type="text" placeholder="Book Title" required />
+            </div>
+          </div>
+          <div class="book-card-title">
+            <div class="book-card-imgs">
+              <img src="assets/imgs/author.svg" alt="Author" />
+            </div>
+            <div class="book-card-text">
+              <input type="text" placeholder="Author Name" required />
+            </div>
+          </div>
+          <div class="book-card-title">
+            <div class="book-card-imgs">
+              <img src="assets/imgs/pages.svg" alt="Pages" />
+            </div>
+            <div class="book-card-text">
+              <input type="number" placeholder="Number of Pages" required />
+            </div>
+          </div>
+          <button class="btn">Add Book</button>
+        </div>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-text">
+        created by momoproblems for The Odin Project
+      </div>
+    </footer>  
+  </body>
+</html>
