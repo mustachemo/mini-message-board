@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "devstart": "nodemon index.js -e js,html",
-    "serverstart": "npm run devstart & npm run node-sass",
-    "node-sass": "sass --watch styles/main.scss:public/css/main.css"
+    "nodemon": "nodemon index.js -e *",
+    "node-sass": "sass --watch styles/main.scss:public/css/main.css",
+    "dev": "npm run nodemon & npm run node-sass"
   },
   "keywords": [
     "mini",
