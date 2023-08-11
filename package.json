@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node index.js",
     "devstart": "nodemon index.js",
-    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
+    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart",
+    "node-sass": "sass --watch styles/main.scss:public/css/main.css"
   },
   "keywords": [
     "mini",
@@ -36,6 +37,7 @@
     "minireset.css": "^0.0.7",
     "mongodb": "^5.7.0",
     "mongoose": "^7.4.2",
+    "node-sass": "^9.0.0",
     "node-sass-middleware": "^1.0.1",
     "nunjucks": "^3.2.4",
     "url": "^0.11.1"
