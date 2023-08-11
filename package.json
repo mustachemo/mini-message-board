@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "nodemon": "nodemon index.js -e *js,scss,html",
+    "nodemon": "nodemon index.js -e *js,scss,html,njk",
     "node-sass": "sass --watch styles/main.scss:public/css/main.css",
     "dev": "npm run nodemon & npm run node-sass"
   },
