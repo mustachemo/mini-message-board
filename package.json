@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "devstart": "nodemon index.js",
-    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
+    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart",
+    "scss": "sass --watch scss:public/stylesheets"
   },
   "keywords": [
     "mini",
@@ -34,6 +35,7 @@
     "lodash": "^4.17.21",
     "mongodb": "^5.7.0",
     "mongoose": "^7.4.2",
+    "node-sass-middleware": "^1.0.1",
     "nunjucks": "^3.2.4"
   }
 }
