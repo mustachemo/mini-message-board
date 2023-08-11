@@ -1,90 +1,5 @@
-/*! minireset.css v0.0.7 | MIT License | github.com/jgthms/minireset.css */
-html,
-body,
-p,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-blockquote,
-figure,
-fieldset,
-legend,
-textarea,
-pre,
-iframe,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-ul {
-  list-style: none;
-}
-
-button,
-input,
-select {
-  margin: 0;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-img,
-video {
-  height: auto;
-  max-width: 100%;
-}
-
-iframe {
-  border: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
-}
-
-/* UTILS */
-:root {
-  --background-color: #ccfbf1;
-  --light-green-hover: #a7f3d0;
-}
-
-body {
-  background-color: var(--background-color);
-}
-
 /* NAVBAR */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -97,12 +12,12 @@ body {
   font-size: 2.5rem;
   margin: 1rem;
   color: black;
-  font-family: "Lobster", cursive;
+  font-family: 'Lobster', cursive;
 }
 
 .navbar-links ul {
   display: flex;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
 }
 
 .navbar-links li {
@@ -122,6 +37,7 @@ body {
 }
 
 /* TOGGLE BUTTON */
+
 .navbar-toggle {
   position: absolute;
   top: 1.5rem;
@@ -131,6 +47,7 @@ body {
   justify-content: space-between;
   width: 30px;
   height: 21px;
+
   cursor: pointer;
   color: black;
   font-size: 2rem;
@@ -143,6 +60,7 @@ body {
 }
 
 /* FOOTER */
+
 .footer {
   display: flex;
   justify-content: center;
@@ -156,31 +74,36 @@ body {
 }
 
 /* MEDIA QUERIES */
+
 @media (max-width: 500px) {
   .navbar-toggle {
     display: flex;
   }
+
   .navbar-links {
     display: none;
     width: 100%;
   }
+
   .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .navbar-links ul {
     flex-direction: column;
     width: 100%;
   }
+
   .navbar-links li {
     text-align: center;
   }
+
   .navbar-links li a {
     padding: 0.5rem;
   }
+
   .navbar-links.active {
     display: flex;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
