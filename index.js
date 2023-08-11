@@ -23,8 +23,7 @@ app.use(logger('dev'));
 app.use(cors());
 
 app.use('/', indexRouter);
-app.use('/getUsers', getUserRouter);
-app.use('/addUser', addUserRouter);
+app.use('/new', newMessageRouter);
 
 app.listen(port, () => {
   console.log(`listening on port ${port}!`);
