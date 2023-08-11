@@ -17,7 +17,7 @@ const port = process.env.PORT;
 (async () => {
   try {
     await testDB();
-    await listDatabases();
+    // await listDatabases();
     app.listen(port, () => {
       console.log(`listening on port ${port}!`);
     });
