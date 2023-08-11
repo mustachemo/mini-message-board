@@ -1,9 +1,16 @@
 {% extends "base.njk" %}
 
 {% block title %}
-    Index Page
+    {{ title }}
 {% endblock %}
 
 {% block main %}
-    hello
+    <h1>Posts</h1>
+    <ul>
+    {% for message in messages %}
+    <li>{{ message.text }}</li>
+    <li>{{ message.user }}</li>
+    <li>{{ message.added }}</li>
+    {% endfor %}
+    </ul>
 {% endblock %}
