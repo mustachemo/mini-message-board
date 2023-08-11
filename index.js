@@ -5,6 +5,7 @@ import logger from 'morgan';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import { testDB, listDatabases } from './config/database.js';
 import indexRouter from './routes/index.js';
 import newMessageRouter from './routes/new.js';
 
@@ -12,6 +13,18 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT;
+
+(async () => {
+  try {
+    await testDB();
+    await listDatabases();
+    app.listen(port, () => {
+      console.log(`listening on port ${port}!`);
+    });
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+  }
+})();
 
 nunjucks.configure('views', {
   autoescape: true,
@@ -32,7 +45,3 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/new', newMessageRouter);
-
-app.listen(port, () => {
-  console.log(`listening on 127.0.0.1:${port}!`);
-});
