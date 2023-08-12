@@ -1,19 +1,24 @@
 import Message from '../models/message.js';
 import { connectDB } from '../config/database.js';
+import { format } from 'date-fns';
 
 const getMessageGet = async (req, res) => {
   try {
     await connectDB();
     const messages = await Message.find();
+    const plainMessages = messages.map(message => message.toObject());
+
+    plainMessages.forEach(message => {
+      const date = new Date(message.createdAt);
+      message.createdAt = format(date, 'dd/MM/yyyy');
+    });
     res.render('index', {
-      title: 'Mini Messageboard',
-      messages: messages,
+      messages: plainMessages,
     });
   } catch (error) {
     console.error(error);
     res.render('index', {
-      title: 'Mini Messageboard',
-      error: 'Error getting messages from database',
+      connectionMessage: 'Error getting messages from database',
     });
   }
 };

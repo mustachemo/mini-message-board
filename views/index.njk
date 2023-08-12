@@ -1,20 +1,22 @@
 {% extends "base.njk" %}
 
 {% block title %}
-    {{ title }}
+    Mini Messageboard
 {% endblock %}
 
 {% block main %}
     <div class="message-container">
-        {% if error %}
-        <div class="message">{{ error }}</div>
+        {% if connectionMessage %}
+            <div class="message">
+                <h3 class="message-author">{{ message }}</h3>
+            </div>
         {% endif %}
         {% for message in messages %}
-        <div class="message">
-            <h3 class="message-author">{{ message.name }}</h3>
-            <p class="message-text">{{ message.message }}</p>
-            <span class="message-timestamp">{{ message.createdAt }}</span>
-        </div>
+            <div class="message">
+                <h3 class="message-author">{{ message.name }}</h3>
+                <p class="message-text">{{ message.message }}</p>
+                <span class="message-timestamp">{{ message.createdAt }}</span>
+            </div>
         {% endfor %}
   </div>
 {% endblock %}
