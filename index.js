@@ -5,7 +5,7 @@ import logger from 'morgan';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import path from 'path';
-import { testDB, listDatabases } from './config/database.js';
+import { connectDB, listDatabases } from './config/database.js';
 import indexRouter from './routes/index.js';
 import newMessageRouter from './routes/new.js';
 
@@ -16,11 +16,8 @@ const port = process.env.PORT;
 
 (async () => {
   try {
-    await testDB();
-    // await listDatabases();
-    app.listen(port, () => {
-      console.log(`listening on port ${port}!`);
-    });
+    await connectDB();
+    await listDatabases();
   } catch (error) {
     console.error('Error connecting to MongoDB:', error);
   }
@@ -45,3 +42,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/new', newMessageRouter);
+
+app.listen(port, () => {
+  console.log(`listening on port ${port}!`);
+});

@@ -6,7 +6,7 @@ dotenv.config();
 
 const uri = process.env.MONGODB_URI;
 
-const testDB = async () => {
+const connectDB = async () => {
   try {
     await mongoose.connect(uri, {
       useNewUrlParser: true, // This will help to avoid DeprecationWarning: current Server Discovery and Monitoring engine is deprecated
@@ -40,4 +40,4 @@ const listDatabases = async () => {
   }
 };
 
-export { testDB, listDatabases };
+export { connectDB, listDatabases };

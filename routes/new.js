@@ -1,9 +1,11 @@
 import express from 'express';
+import {
+  newMessageGet,
+  newMessagePost,
+} from '../controllers/newMessageController.js';
 
 const newMessageRouter = express.Router();
 
-newMessageRouter.get('/', (req, res) => {
-  res.render('form', { title: 'New Message' });
-});
+newMessageRouter.route('/').get(newMessageGet).post(newMessagePost);
 
 export default newMessageRouter;

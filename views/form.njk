@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {% block title %}
-    {{ title }}
+    New Messge
 {% endblock %}
 
 {% block main %}
@@ -15,6 +15,7 @@
         <textarea id="message" name="message" rows="4" required></textarea>
         
         <button type="submit">Submit</button>
+        <h1>{{ resolutionMessage}}</h1>
         </form>
     </div>
 {% endblock %}
