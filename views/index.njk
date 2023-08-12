@@ -6,11 +6,14 @@
 
 {% block main %}
     <div class="message-container">
+        {% if error %}
+        <div class="message">{{ error }}</div>
+        {% endif %}
         {% for message in messages %}
         <div class="message">
-            <h3 class="message-author">{{ message.author }}</h3>
-            <p class="message-text">{{ message.text }}</p>
-            <span class="message-timestamp">{{ message.timestamp }}</span>
+            <h3 class="message-author">{{ message.name }}</h3>
+            <p class="message-text">{{ message.message }}</p>
+            <span class="message-timestamp">{{ message.createdAt }}</span>
         </div>
         {% endfor %}
   </div>
