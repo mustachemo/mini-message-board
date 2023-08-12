@@ -14,14 +14,14 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 
-(async () => {
-  try {
-    await connectDB();
-    await listDatabases();
-  } catch (error) {
-    console.error('Error connecting to MongoDB:', error);
-  }
-})();
+// (async () => {
+//   try {
+//     await connectDB();
+//     await listDatabases();
+//   } catch (error) {
+//     console.error('Error connecting to MongoDB:', error);
+//   }
+// })();
 
 nunjucks.configure('views', {
   autoescape: true,
